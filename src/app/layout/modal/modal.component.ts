@@ -10,12 +10,22 @@ import {tableDataService} from '../../../services/tableDataService'
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-
+ header:string;
+ validationFlag:boolean = false;
   constructor(
-    public dialogRef: MatDialogRef<ModalComponent> , @Inject(MAT_DIALOG_DATA) public data: Record ) {}
+    public dialogRef: MatDialogRef<ModalComponent> , @Inject(MAT_DIALOG_DATA) public data: Record ) {
+     this.header = data.name?"Edit":"Add";
+    }
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+  onOkClick(){
+    this.validationFlag = true;
+    
+    if(this.data && this.data.name && this.data.phone){
+      this.dialogRef.close(this.data);
+    }
   }
 
   ngOnInit(): void {
