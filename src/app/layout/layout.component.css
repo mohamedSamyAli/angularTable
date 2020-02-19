@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 40%;
+  }
+  .btnSearch{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ .mat-column-action{
+  width: 130px;
+ }
+
+ .material-icons.color_Red { color: red; }

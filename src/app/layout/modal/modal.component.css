@@ -1,0 +1,7 @@
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+}
+.mat-dialog-content { 
+    height: 230px !important;
+}

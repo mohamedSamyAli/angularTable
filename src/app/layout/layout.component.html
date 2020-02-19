@@ -1,0 +1,10 @@
+<div class="btnSearch">
+    <mat-form-field>
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="dataservice.applyFilter($event)" >
+    </mat-form-field>
+    <button mat-raised-button (click)="openDialog()">    
+      <mat-icon >add</mat-icon>
+  </button>
+  </div>
+<app-table></app-table>

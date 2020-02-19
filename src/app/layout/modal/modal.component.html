@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+
+    <h2 mat-dialog-title>{{data.name?"Edit":"Add"}}</h2>
+    <div class="inputcontainer" >
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input required  matInput [(ngModel)]="data.name" >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>PhoneNumber</mat-label>
+        <input required matInput [(ngModel)]="data.phone" >
+      </mat-form-field>
+      
+    </div>
+    <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </div>
+</div>
