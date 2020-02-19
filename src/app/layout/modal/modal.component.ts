@@ -22,13 +22,14 @@ export class ModalComponent implements OnInit {
   }
   onOkClick(){
     this.validationFlag = true;
-    
-    if(this.data && this.data.name && this.data.phone){
+
+    if(this.data && this.data.name&& this.data.name.trim() && this.data.phone  &&  new RegExp(/^[0-9]*$/).test(this.data.phone)){
       this.dialogRef.close(this.data);
     }
   }
 
   ngOnInit(): void {
+
   }
 
 }

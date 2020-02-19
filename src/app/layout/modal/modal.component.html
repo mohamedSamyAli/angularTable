@@ -8,7 +8,7 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>PhoneNumber</mat-label>
-        <input type="tel" pattern="[0-9]{11}" required matInput [(ngModel)]="data.phone" >
+        <input type="tel" pattern="^[0-9]*$" required matInput [(ngModel)]="data.phone" >
       </mat-form-field>
     </div>
     <div mat-dialog-actions>
